@@ -1,0 +1,10 @@
+services:
+  openresty:
+    image: openresty/openresty
+    container_name: openresty
+    volumes:
+      - ./nginx/:/etc/nginx/conf.d/
+      - ./nginxcache/:/data/nginx/cache
+      - ./nginx/scripts:/data/nginx/scripts
+    ports:
+      - '80:80'
